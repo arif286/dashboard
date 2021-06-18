@@ -4,19 +4,34 @@
       Case History
     </p>
     <table class="w-100 table-border">
+      <!-- <thead>
+        <tr>
+          <th className="text-secondary" scope="col">
+            Name
+          </th>
+          <th className="text-secondary" scope="col">
+            Email Id
+          </th>
+          <th className="text-secondary" scope="col">
+            Service
+          </th>
+          <th className="text-secondary" scope="col">
+            pay with
+          </th>
+          <th className="text-secondary" scope="col">
+            status
+          </th>
+        </tr>
+      </thead> -->
       <tbody>
         <tr v-for="item in data" :key="item.id">
           <td>{{ item.equipmentTag }}</td>
           <td>{{ item.component }}</td>
           <td>{{ item.assessmentDate }}</td>
           <td>Case {{ item.case }}</td>
+          <td>{{ item.status }}</td>
           <td>
-            <span :class="item.status == 'DRAFT'&& 'status-draft' || item.status == 'PROCESSING'&& 'status-process' || item.status == 'SUCCESS' && 'status-success' || item.status === 'FAILURE' &&'status-failure'">
-              {{ item.status }}
-            </span>
-          </td>
-          <td>
-            <span :class="item.copy ? 'copy-btn' : ''">{{ item.copy ? 'copy' : '' }}</span>
+            copy
           </td>
         </tr>
       </tbody>
@@ -30,6 +45,11 @@ export default {
     data: {
       type: Array,
       required: true
+    }
+  },
+  data () {
+    return {
+      copyBtn: 'copy'
     }
   }
 }
@@ -47,30 +67,7 @@ export default {
   color: #a09b9b;
 }
 .table-contain {
-  height: 606px;
+  height: 570px;
   overflow-y: scroll;
-}
-.copy-btn{
-  background-color: #007bff;
-  padding: 1px 20px;
-  color: white;
-  border-radius: 5px;
-  font-weight: 500;
-}
-.status-draft{
-  color: #007bff;
-  font-weight: 700;
-}
-.status-process{
-  color: #ffbd0a;
-  font-weight: 700;
-}
-.status-success{
-  color: #96df79;
-  font-weight: 700;
-}
-.status-failure{
-  color: red;
-  font-weight: 700;
 }
 </style>

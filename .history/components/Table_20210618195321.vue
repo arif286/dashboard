@@ -11,7 +11,7 @@
           <td>{{ item.assessmentDate }}</td>
           <td>Case {{ item.case }}</td>
           <td>
-            <span :class="item.status == 'DRAFT'&& 'status-draft' || item.status == 'PROCESSING'&& 'status-process' || item.status == 'SUCCESS' && 'status-success' || item.status === 'FAILURE' &&'status-failure'">
+            <span>
               {{ item.status }}
             </span>
           </td>
@@ -55,22 +55,17 @@ export default {
   padding: 1px 20px;
   color: white;
   border-radius: 5px;
-  font-weight: 500;
 }
 .status-draft{
   color: #007bff;
-  font-weight: 700;
 }
 .status-process{
-  color: #ffbd0a;
-  font-weight: 700;
+  color: orange;
 }
 .status-success{
-  color: #96df79;
-  font-weight: 700;
+  color: greenyellow;
 }
 .status-failure{
   color: red;
-  font-weight: 700;
 }
 </style>

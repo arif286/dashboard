@@ -1,11 +1,8 @@
 <template>
   <div class="container">
     <div class="dashboard">
-      <b-tabs active-nav-item-class="tab-title" content-class="mt-3">
+      <b-tabs active-nav-item-class="tab-title" content-class="mt-3" fill>
         <b-tab title="ASSESSMENT" active>
-          <template #title>
-            ASSESSMENT <span class="dot" />
-          </template>
           <div class="row mt-5">
             <div class="col-4">
               <Form />
@@ -15,22 +12,13 @@
             </div>
           </div>
         </b-tab>
-        <b-tab>
-          <template #title>
-            SERVICE INFORMATION <span class="dot" />
-          </template>
+        <b-tab title="SERVICE INFORMATION">
           <p>I'm the second tab</p>
         </b-tab>
-        <b-tab>
-          <template #title>
-            EQUIPMENT & COATING <span class="dot" />
-          </template>
+        <b-tab title="EQUIPMENT & COATING">
           <p>I'm the tab with the very, very long title</p>
         </b-tab>
-        <b-tab>
-          <template #title>
-            INSULATION SYSTEM <span class="dot" />
-          </template>
+        <b-tab title="INSULATION SYSTEM">
           <p>I'm a disabled tab!</p>
         </b-tab>
         <b-tab title="INSPECTION">
@@ -39,7 +27,7 @@
       </b-tabs>
       <div class="radial-progress">
         <radial-progress-bar
-          :diameter="70"
+          :diameter="60"
           :completed-steps="completedSteps"
           :total-steps="totalSteps"
           inner-stroke-color="grey"
@@ -56,7 +44,7 @@
 <script>
 import { dashboardData } from '@/assets/dashboard.js'
 import RadialProgressBar from 'vue-radial-progress'
-
+// eslint-disable-next-line semi
 export default {
   components: {
     RadialProgressBar
@@ -94,14 +82,7 @@ a:hover{
 }
 .radial-progress{
   position: absolute;
-  top: 39px;
-  right: 12px;
-}
-.dot {
-  height: 10px;
-  width: 10px;
-  background-color: red;
-  border-radius: 50%;
-  display: inline-block;
+  top: 0;
+  right: 35px;
 }
 </style>

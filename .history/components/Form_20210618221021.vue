@@ -44,8 +44,17 @@ export default {
     return {
       form: {
         email: '',
-        name: ''
+        name: '',
+        food: null,
+        checked: []
       },
+      foods: [
+        { text: 'Select One', value: null },
+        'Carrots',
+        'Beans',
+        'Tomatoes',
+        'Corn'
+      ],
       show: true,
       checked: false
     }

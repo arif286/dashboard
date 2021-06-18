@@ -1,11 +1,59 @@
 <template>
   <div class="container">
     <div class="dashboard">
+      <nav>
+        <div id="nav-tab" class="nav nav-tabs" role="tablist">
+          <button
+            id="nav-home-tab"
+            class="nav-link active"
+            data-bs-toggle="tab"
+            data-bs-target="#nav-home"
+            type="button"
+            role="tab"
+            aria-controls="nav-home"
+            aria-selected="true"
+          >
+            Home
+          </button>
+          <button
+            id="nav-profile-tab"
+            class="nav-link"
+            data-bs-toggle="tab"
+            data-bs-target="#nav-profile"
+            type="button"
+            role="tab"
+            aria-controls="nav-profile"
+            aria-selected="false"
+          >
+            Profile
+          </button>
+          <button
+            id="nav-contact-tab"
+            class="nav-link"
+            data-bs-toggle="tab"
+            data-bs-target="#nav-contact"
+            type="button"
+            role="tab"
+            aria-controls="nav-contact"
+            aria-selected="false"
+          >
+            Contact
+          </button>
+        </div>
+      </nav>
+      <div id="nav-tabContent" class="tab-content">
+        <div id="nav-home" class="tab-pane fade show active" role="tabpanel" aria-labelledby="nav-home-tab">
+          <h1>head</h1>
+        </div>
+        <div id="nav-profile" class="tab-pane fade" role="tabpanel" aria-labelledby="nav-profile-tab">
+          <h4>dsjkals</h4>
+        </div>
+        <div id="nav-contact" class="tab-pane fade" role="tabpanel" aria-labelledby="nav-contact-tab">
+          ...
+        </div>
+      </div>
       <b-tabs active-nav-item-class="tab-title" content-class="mt-3">
         <b-tab title="ASSESSMENT" active>
-          <template #title>
-            ASSESSMENT <span class="dot" />
-          </template>
           <div class="row mt-5">
             <div class="col-4">
               <Form />
@@ -15,22 +63,13 @@
             </div>
           </div>
         </b-tab>
-        <b-tab>
-          <template #title>
-            SERVICE INFORMATION <span class="dot" />
-          </template>
+        <b-tab title="SERVICE INFORMATION">
           <p>I'm the second tab</p>
         </b-tab>
-        <b-tab>
-          <template #title>
-            EQUIPMENT & COATING <span class="dot" />
-          </template>
+        <b-tab title="EQUIPMENT & COATING">
           <p>I'm the tab with the very, very long title</p>
         </b-tab>
-        <b-tab>
-          <template #title>
-            INSULATION SYSTEM <span class="dot" />
-          </template>
+        <b-tab title="INSULATION SYSTEM">
           <p>I'm a disabled tab!</p>
         </b-tab>
         <b-tab title="INSPECTION">
@@ -56,7 +95,7 @@
 <script>
 import { dashboardData } from '@/assets/dashboard.js'
 import RadialProgressBar from 'vue-radial-progress'
-
+// eslint-disable-next-line semi
 export default {
   components: {
     RadialProgressBar

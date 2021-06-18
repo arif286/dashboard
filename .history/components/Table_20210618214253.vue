@@ -1,7 +1,7 @@
 <template>
   <div class="table-contain">
     <p class="title">
-      Case History
+      Case History {{ colour }}
     </p>
     <table class="w-100 table-border">
       <tbody>
@@ -31,6 +31,20 @@ export default {
       type: Array,
       required: true
     }
+  },
+  data () {
+    return {
+      colour: ''
+    }
+  },
+  computed: {
+    colourHandler () {
+      this.data.forEach((item) => {
+        console.log(item)
+        this.colour = item.status
+      })
+      return this.colour
+    }
   }
 }
 </script>
@@ -55,22 +69,17 @@ export default {
   padding: 1px 20px;
   color: white;
   border-radius: 5px;
-  font-weight: 500;
 }
 .status-draft{
   color: #007bff;
-  font-weight: 700;
 }
 .status-process{
-  color: #ffbd0a;
-  font-weight: 700;
+  color: orange;
 }
 .status-success{
-  color: #96df79;
-  font-weight: 700;
+  color: greenyellow;
 }
 .status-failure{
   color: red;
-  font-weight: 700;
 }
 </style>

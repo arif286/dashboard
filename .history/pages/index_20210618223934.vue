@@ -3,9 +3,7 @@
     <div class="dashboard">
       <b-tabs active-nav-item-class="tab-title" content-class="mt-3">
         <b-tab title="ASSESSMENT" active>
-          <template #title>
-            ASSESSMENT <span class="dot" />
-          </template>
+          <span class="dot" />
           <div class="row mt-5">
             <div class="col-4">
               <Form />
@@ -15,22 +13,14 @@
             </div>
           </div>
         </b-tab>
-        <b-tab>
-          <template #title>
-            SERVICE INFORMATION <span class="dot" />
-          </template>
+        <b-tab title="SERVICE INFORMATION">
+          <span class="dot" />
           <p>I'm the second tab</p>
         </b-tab>
-        <b-tab>
-          <template #title>
-            EQUIPMENT & COATING <span class="dot" />
-          </template>
+        <b-tab title="EQUIPMENT & COATING">
           <p>I'm the tab with the very, very long title</p>
         </b-tab>
-        <b-tab>
-          <template #title>
-            INSULATION SYSTEM <span class="dot" />
-          </template>
+        <b-tab title="INSULATION SYSTEM">
           <p>I'm a disabled tab!</p>
         </b-tab>
         <b-tab title="INSPECTION">
@@ -56,7 +46,7 @@
 <script>
 import { dashboardData } from '@/assets/dashboard.js'
 import RadialProgressBar from 'vue-radial-progress'
-
+// eslint-disable-next-line semi
 export default {
   components: {
     RadialProgressBar

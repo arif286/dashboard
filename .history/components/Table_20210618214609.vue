@@ -55,22 +55,21 @@ export default {
   padding: 1px 20px;
   color: white;
   border-radius: 5px;
-  font-weight: 500;
 }
 .status-draft{
   color: #007bff;
-  font-weight: 700;
+  font-weight: 500;
 }
 .status-process{
-  color: #ffbd0a;
-  font-weight: 700;
+  color: #E7C978;
+  font-weight: 500;
 }
 .status-success{
   color: #96df79;
-  font-weight: 700;
+  font-weight: 500;
 }
 .status-failure{
   color: red;
-  font-weight: 700;
+  font-weight: 500;
 }
 </style>

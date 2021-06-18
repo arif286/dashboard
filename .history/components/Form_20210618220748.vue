@@ -23,10 +23,8 @@
       </div>
       <div>
         <label for="Input5" class="form-label">Units</label>
-        <div class="d-flex">
-          <p class="unit-measure">
-            Metric
-          </p>
+        <div>
+          <label for="">cs</label>
           <b-form-checkbox v-model="checked" name="check-button" switch>
             US Customary
           </b-form-checkbox>
@@ -44,8 +42,17 @@ export default {
     return {
       form: {
         email: '',
-        name: ''
+        name: '',
+        food: null,
+        checked: []
       },
+      foods: [
+        { text: 'Select One', value: null },
+        'Carrots',
+        'Beans',
+        'Tomatoes',
+        'Corn'
+      ],
       show: true,
       checked: false
     }
@@ -69,9 +76,5 @@ export default {
 }
 .Assessment-input label{
   color: gray;
-}
-.unit-measure{
-  color: gray;
-  margin-right: 7px;
 }
 </style>

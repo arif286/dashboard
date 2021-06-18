@@ -46,7 +46,7 @@ export default {
   margin-bottom: 0px;
   color: #a09b9b;
 }
-.table-contain {
+.table-contain table {
   height: 606px;
   overflow-y: scroll;
 }

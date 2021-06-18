@@ -10,14 +10,11 @@
           <td>{{ item.component }}</td>
           <td>{{ item.assessmentDate }}</td>
           <td>Case {{ item.case }}</td>
-          <td>
-            <span :class="item.status == 'DRAFT'&& 'status-draft' || item.status == 'PROCESSING'&& 'status-process' || item.status == 'SUCCESS' && 'status-success' || item.status === 'FAILURE' &&'status-failure'">
-              {{ item.status }}
-            </span>
+          <td>{{ item.status }}</td>
+          <td :class="item.copy ? 'copy-btn' : ''">
+            {{ item.copy ? <span>copy</span> : '' }}
           </td>
-          <td>
-            <span :class="item.copy ? 'copy-btn' : ''">{{ item.copy ? 'copy' : '' }}</span>
-          </td>
+          <td><span>dd</span></td>
         </tr>
       </tbody>
     </table>
@@ -47,30 +44,10 @@ export default {
   color: #a09b9b;
 }
 .table-contain {
-  height: 606px;
+  height: 570px;
   overflow-y: scroll;
 }
 .copy-btn{
-  background-color: #007bff;
-  padding: 1px 20px;
-  color: white;
-  border-radius: 5px;
-  font-weight: 500;
-}
-.status-draft{
-  color: #007bff;
-  font-weight: 700;
-}
-.status-process{
-  color: #ffbd0a;
-  font-weight: 700;
-}
-.status-success{
-  color: #96df79;
-  font-weight: 700;
-}
-.status-failure{
-  color: red;
-  font-weight: 700;
+  background-color: gold;
 }
 </style>

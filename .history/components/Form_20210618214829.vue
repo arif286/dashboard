@@ -2,11 +2,11 @@
   <div>
     <form class="Assessment-input" action="">
       <div class="mb-3">
-        <label for="Input1" class="form-label">Equipment Tag <span class="text-danger">*</span></label>
+        <label for="Input1" class="form-label">Equipment Tag *</label>
         <input id="Input1" type="text" class="form-control">
       </div>
       <div class="mb-3">
-        <label for="Input2" class="form-label">Component <span class="text-danger">*</span></label>
+        <label for="Input2" class="form-label">Component</label>
         <input id="Input2" type="text" class="form-control">
       </div>
       <div class="mb-3">
@@ -23,14 +23,9 @@
       </div>
       <div>
         <label for="Input5" class="form-label">Units</label>
-        <div class="d-flex">
-          <p class="unit-measure">
-            Metric
-          </p>
-          <b-form-checkbox v-model="checked" name="check-button" switch>
-            US Customary
-          </b-form-checkbox>
-        </div>
+        <b-form-checkbox v-model="checked" name="check-button" switch>
+          US Customary
+        </b-form-checkbox>
       </div>
       <b-button class="submit-button" type="submit" variant="danger">
         START NEW CASE
@@ -44,8 +39,17 @@ export default {
     return {
       form: {
         email: '',
-        name: ''
+        name: '',
+        food: null,
+        checked: []
       },
+      foods: [
+        { text: 'Select One', value: null },
+        'Carrots',
+        'Beans',
+        'Tomatoes',
+        'Corn'
+      ],
       show: true,
       checked: false
     }
@@ -66,12 +70,5 @@ export default {
 .Assessment-input input:focus {
   border-color: red;
   box-shadow: none;
-}
-.Assessment-input label{
-  color: gray;
-}
-.unit-measure{
-  color: gray;
-  margin-right: 7px;
 }
 </style>

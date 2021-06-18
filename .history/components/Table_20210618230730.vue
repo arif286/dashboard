@@ -73,4 +73,5 @@ export default {
   color: red;
   font-weight: 700;
 }
+
 </style>

@@ -55,7 +55,6 @@ export default {
   padding: 1px 20px;
   color: white;
   border-radius: 5px;
-  font-weight: 500;
 }
 .status-draft{
   color: #007bff;
