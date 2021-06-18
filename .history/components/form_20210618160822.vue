@@ -1,0 +1,64 @@
+<template>
+  <div>
+    <form action="">
+      <div class="mb-3">
+        <label for="Input1" class="form-label">Equipment Tag</label>
+        <input id="Input1" type="text" class="form-control">
+      </div>
+      <div class="mb-3">
+        <label for="Input2" class="form-label">Component</label>
+        <input id="Input2" type="text" class="form-control">
+      </div>
+      <div class="mb-3">
+        <label for="Input3" class="form-label">Assessment Date</label>
+        <input id="Input3" type="text" class="form-control">
+      </div>
+      <div class="mb-3">
+        <label for="Input4" class="form-label">Simulation Case</label>
+        <input id="Input4" type="text" class="form-control">
+      </div>
+      <div class="mb-3">
+        <label for="Input5" class="form-label">Assessment Interval (Years)</label>
+        <input id="Input5" type="text" class="form-control">
+      </div>
+      <div class="form-check form-switch">
+        <input id="flexSwitchCheckDefault" class="form-check-input" type="checkbox">
+        <label class="form-check-label" for="flexSwitchCheckDefault">Default switch checkbox input</label>
+      </div>
+    </form>
+  </div>
+</template>
+<script>
+export default {
+  data () {
+    return {
+      form: {
+        email: '',
+        name: '',
+        food: null,
+        checked: []
+      },
+      foods: [
+        { text: 'Select One', value: null },
+        'Carrots',
+        'Beans',
+        'Tomatoes',
+        'Corn'
+      ],
+      show: true,
+      checked: false
+    }
+  },
+  methods: {
+    onSubmit (event) {
+      event.preventDefault()
+      alert(JSON.stringify(this.form))
+    }
+  }
+}
+</script>
+<style>
+.submit-button {
+  width: 200px;
+}
+</style>
