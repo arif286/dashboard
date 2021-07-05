@@ -21,7 +21,8 @@ export const dashboardData = [
     component: 'New component',
     assessmentDate: '25/032021',
     case: 3,
-    status: 'processing'
+    status: 'processing',
+    copy: true
   },
   {
     id: 4,
@@ -29,7 +30,8 @@ export const dashboardData = [
     component: 'New component',
     assessmentDate: '25/032021',
     case: 4,
-    status: 'success'
+    status: 'success',
+    copy: true
   },
   {
     id: 5,
@@ -37,7 +39,8 @@ export const dashboardData = [
     component: 'New component',
     assessmentDate: '25/032021',
     case: 5,
-    status: 'failure'
+    status: 'failure',
+    copy: true
   },
   {
     id: 6,
@@ -53,7 +56,8 @@ export const dashboardData = [
     component: 'New component',
     assessmentDate: '25/032021',
     case: 7,
-    status: 'success'
+    status: 'success',
+    copy: true
   },
   {
     id: 8,

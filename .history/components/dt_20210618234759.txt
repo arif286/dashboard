@@ -1,0 +1,6 @@
+Update:
+- created a dashboard ui interface.
+- implemented case History feature.
+- applied progress-bar feature.
+Today:
+will continue connect data base.

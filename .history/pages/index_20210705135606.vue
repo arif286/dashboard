@@ -59,6 +59,7 @@
 <script>
 import { dashboardData } from '@/assets/dashboard.js'
 import RadialProgressBar from 'vue-radial-progress'
+// import Nav from 'components/Nav.vue'
 
 export default {
   components: {

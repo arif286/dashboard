@@ -58,8 +58,6 @@ export default {
 }
 .copy-btn{
   width: 120px;
-  font-weight: 700;
-  font-size: 18px;
 }
 .draft{
   color: #007bff;

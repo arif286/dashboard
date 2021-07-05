@@ -11,18 +11,12 @@
           <td>{{ item.assessmentDate }}</td>
           <td>Case {{ item.case }}</td>
           <td>
-            <span
-              :class="item.status"
-              class="text-uppercase"
-            >
-
+            <button :class="item.status">
               {{ item.status }}
-            </span>
-          </td>
-          <td v-if="item.status === 'success' || item.status === 'failure'">
-            <button class="btn btn-primary copy-btn">
-              copy
             </button>
+          </td>
+          <td>
+            <span :class="item.copy ? 'copy-btn' : ''">{{ item.copy ? 'copy' : '' }}</span>
           </td>
         </tr>
       </tbody>
@@ -57,23 +51,25 @@ export default {
   overflow-y: scroll;
 }
 .copy-btn{
-  width: 120px;
-  font-weight: 700;
-  font-size: 18px;
+  background-color: #007bff;
+  padding: 1px 20px;
+  color: white;
+  border-radius: 5px;
+  font-weight: 500;
 }
-.draft{
+.status-draft{
   color: #007bff;
   font-weight: 700;
 }
-.processing{
+.status-process{
   color: #ffbd0a;
   font-weight: 700;
 }
-.success{
+.status-success{
   color: #96df79;
   font-weight: 700;
 }
-.failure{
+.status-failure{
   color: red;
   font-weight: 700;
 }
